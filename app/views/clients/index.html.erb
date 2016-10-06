@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de clientes</h1>
+
+<table class="table table-condesed">
+  <thead>
+    <tr class="info">
+      <th>Id number</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Celphone</th>
+      <th>Nit</th>
+      <th>Document type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clients.each do |client| %>
+      <tr class="active">
+        <td><%= client.id_number %></td>
+        <td><%= client.first_name %></td>
+        <td><%= client.last_name %></td>
+        <td><%= client.email %></td>
+        <td><%= client.address %></td>
+        <td><%= client.phone %></td>
+        <td><%= client.celphone %></td>
+        <td><%= client.nit %></td>
+        <td><%= client.document_type %></td>
+        <td><%= link_to 'Show', client %></td>
+        <td><%= link_to 'Edit', edit_client_path(client) %></td>
+        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client', new_client_path %>
