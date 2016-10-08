@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @inscription.client_id %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @inscription.event_id %>
+</p>
+
+<p>
+  <strong>Is received:</strong>
+  <%= @inscription.is_received %>
+</p>
+
+<%= link_to 'Edit', edit_inscription_path(@inscription) %> |
+<%= link_to 'Back', inscriptions_path %>

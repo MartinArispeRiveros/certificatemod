@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :inscriptions
   resources :clients
   resources :events
   resources :users
